@@ -1,0 +1,321 @@
+<html>
+  <head>
+    <title>Safari Destinations</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/public/style.css" />
+    <link rel="stylesheet" type="text/css" href="/public/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/public/styler.css" />
+    <link rel="icon" type="image/png" href="/public/logo.png" sizes="32x32">
+    <link rel='stylesheet' href='/public/add.css' type='text/css'/>
+    <link href="/public/LineIcons.css" rel="stylesheet">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+<center> <font size="4" color='white'><strong> Add a New Safari Destination</strong></font></center>
+<div class="contact-form form-style-one mt-35 wow fadeIn" data-wow-duration="0s" data-wow-delay="0s"></div>
+<form action="/newAdd" method="POST" enctype="multipart/form-data">
+        <div class="form-input mt-15">
+        <label><strong>Destination</strong></label>
+        <div class="input-items default">
+            <input type="text" id="location" placeholder="Location of destination, e.g Maasai Mara" name="location" required>
+            <i class="lni-envelope"></i>
+        </div>
+        </div> <!-- form input -->
+        <div class="form-input mt-15">
+        <label><strong>Your Email</strong></label>
+        <div class="input-items default">
+            <input type="email" id="email" placeholder="Email Address, e.g pvxxxxx@gmail.com" name="email" required>
+            <i class="lni-envelope"></i>
+        </div>
+        </div> <!-- form input -->
+        <div class="form-input mt-15">
+        <label><strong>Your Phone</strong></label>
+        <div class="input-items default">
+            <input type="tel" id="phone" placeholder="Phone, e.g +25678XXXXXXX" name="phone" required>
+            <i class="lni-phone-handset"></i>
+        </div>
+        </div> <!-- form input -->
+        <div class="form-input mt-15">
+        <label><strong>Country of Destination</strong></label>
+        <div class="input-items default">
+        <select class="form-control-selector" id="fcountry" name="country" required>
+            <option class="select-option" value="" disabled selected>Your Country ...</option>
+            <option class="select-option" value="U.K">United Kingdom</option>
+            <option class="select-option" value="U.S.A">U.S.A</option>
+            <option class="select-option" value="Japan">Japan</option>
+            <option class="select-option" value="South Korea">South Korea</option>
+            <option class="select-option" value="Canada">Canada</option>
+            <option class="select-option" value="Germany">Germany</option>
+            <option class="select-option" value="France">France</option>
+            <option class="select-option" value="Italy">Italy</option>
+            <option class="select-option" value="Spain">Spain</option>
+            <option class="select-option" value="Afghanistan">Afghanistan</option>
+            <option class="select-option" value="Akrotiri">Akrotiri</option>  
+            <option class="select-option" value="Albania">Albania</option>
+            <option class="select-option" value="Algeria">Algeria</option>
+            <option class="select-option" value="American Samoa">A Samoa</option>
+            <option class="select-option" value="Andorra">Andorra</option>
+            <option class="select-option" value="Angola">Angola</option>
+            <option class="select-option" value="Anguilla">Anguilla</option>
+            <option class="select-option" value="Antarctica">Antarctica</option>
+            <option class="select-option" value="Antigua and Barbuda">Antigua & B</option>
+            <option class="select-option" value="Argentina">Argentina</option>
+            <option class="select-option" value="Armenia ">Armenia </option>
+            <option class="select-option" value="Aruba">Aruba</option>
+            <option class="select-option" value="Ashmore and Cartier Islands">Ashmore Is</option>
+            <option class="select-option" value="Australia">Australia</option>
+            <option class="select-option" value="Austria">Austria</option>
+            <option class="select-option" value="Azerbaijan">Azerbaijan</option>
+            <option class="select-option" value="Bahamas">Bahamas</option>
+            <option class="select-option" value="Bahrain">Bahrain</option>
+            <option class="select-option" value="Bangladesh">Bangladesh</option>
+            <option class="select-option" value="Barbados">Barbados</option>
+            <option class="select-option" value="Bassas da India">Bassas da I</option>
+            <option class="select-option" value="Belarus">Belarus</option>
+            <option class="select-option" value="Belgium">Belgium</option>
+            <option class="select-option" value="Belize">Belize</option>
+            <option class="select-option" value="Benin">Benin</option>
+            <option class="select-option" value="Bermuda">Bermuda</option>
+            <option class="select-option" value="Bhutan">Bhutan</option>
+            <option class="select-option" value="Bolivia">Bolivia</option>
+            <option class="select-option" value="Bosnia and Herzegovina">Bosnia</option>
+            <option class="select-option" value="Botswana">Botswana</option>
+            <option class="select-option" value="Bouvet Island">Bouvet Island</option>   
+            <option class="select-option" value="Brazil">Brazil</option>
+            <option class="select-option" value="British Indian Ocean Territory">British IO</option>
+            <option class="select-option" value="British Virgin Islands">Virgin Is</option>
+            <option class="select-option" value="Brunei">Brunei</option>
+            <option class="select-option" value="Bulgaria">Bulgaria</option>
+            <option class="select-option" value="Burkina Faso">Burkina Faso</option> 
+            <option class="select-option" value="Burma">Burma</option>    
+            <option class="select-option" value="Burundi">Burundi</option>
+            <option class="select-option" value="Cambodia">Cambodia</option>
+            <option class="select-option" value="Cameroon">Cameroon</option>
+            <option class="select-option" value="Cape Verde">Cape Verde</option>
+            <option class="select-option" value="Cayman Islands">Cayman Is</option>
+            <option class="select-option" value="Central African Republic">CAR</option> 
+            <option class="select-option" value="Chad">Chad</option>   
+            <option class="select-option" value="Chile">Chile</option>
+            <option class="select-option" value="China">China</option>
+            <option class="select-option" value="Christmas Island">Christmas Is</option>
+            <option class="select-option" value="Clipperton Island">Clipperton Is</option>  
+            <option class="select-option" value="Cocos Island">Cocos Island</option>
+            <option class="select-option" value="Colombia">Colombia</option>
+            <option class="select-option" value="Comoros">Comoros</option>
+            <option class="select-option" value="Congo, Brazaville">Congo, Braza.</option>
+            <option class="select-option" value="Cook Islands">Cook Islands</option>
+            <option class="select-option" value="Coral Sea Islands">Coral Sea Is</option> 
+            <option class="select-option" value="Costa Rica">Costa Rica</option>
+            <option class="select-option" value="Cote d'voire">Cote d'voire</option>
+            <option class="select-option" value="Croatia">Croatia</option>
+            <option class="select-option" value="Cuba">Cuba</option>
+            <option class="select-option" value="Cyprus">Cyprus</option>
+            <option class="select-option" value="Czech Republic">Czech Republic</option>
+            <option class="select-option" value="Denmark">Denmark</option>
+            <option class="select-option" value="Dhekelia">Dhekelia</option> 
+            <option class="select-option" value="Djibouti">Djibouti</option>
+            <option class="select-option" value="Dominica">Dominica</option>
+            <option class="select-option" value="Dominican Republic">Dominican R</option>
+            <option class="select-option" value="DR Congo">DR Congo</option>
+            <option class="select-option" value="Ecuador">Ecuador</option>
+            <option class="select-option" value="Egypt">Egypt</option>
+            <option class="select-option" value="El Salvador">El Salvador</option>
+            <option class="select-option" value="Equatorial Guinea">E. Guinea</option>
+            <option class="select-option" value="Eritrea">Eritrea</option>
+            <option class="select-option" value="Estonia">Estonia</option>
+            <option class="select-option" value="Ethiopia">Ethiopia</option> 
+            <option class="select-option" value="Europa Island">Europa Is</option> 
+            <option class="select-option" value="Falkland Islands">Falkland Is</option>
+            <option class="select-option" value="Faroe Islands">Faroe Islands</option>
+            <option class="select-option" value="Fiji">Fiji</option>
+            <option class="select-option" value="Finland">Finland</option>
+            <option class="select-option" value="French Guiana">French Guiana</option>
+            <option class="select-option" value="French Polynesia">F. Polynesia</option>
+            <option class="select-option" value="French Southern and Antarctic Lands">F. Antarctic</option>
+            <option class="select-option" value="Gabon">Gabon</option>
+            <option class="select-option" value="Gambia">Gambia</option>
+            <option class="select-option" value="Gaza Strip">Gaza Strip</option>
+            <option class="select-option" value="Gibraltar">Gibraltar</option>
+            <option class="select-option" value="Georgia">Georgia</option>
+            <option class="select-option" value="Ghana">Ghana</option>
+            <option class="select-option" value="Glorioso Islands">Glorioso Is</option> 
+            <option class="select-option" value="Greece">Greece</option>
+            <option class="select-option" value="Greenland">Greenland</option>
+            <option class="select-option" value="Grenada">Grenada</option>
+            <option class="select-option" value="Guadeloupe">Guadeloupe</option>
+            <option class="select-option" value="Guam">Guam</option>
+            <option class="select-option" value="Guatemala">Guatemala</option>
+            <option class="select-option" value="Guernsey">Guernsey</option>
+            <option class="select-option" value="Guyana">Guyana</option>  
+            <option class="select-option" value="Guinea-Bissau">Guinea-Bissau</option>
+            <option class="select-option" value="Guinea">Guinea</option>
+            <option class="select-option" value="Haiti">Haiti</option>
+            <option class="select-option" value="Heard Island and McDonald Islands">Heard Island</option>
+            <option class="select-option" value="Holy See (Vatican City)">Vatican</option>
+            <option class="select-option" value="Honduras">Honduras</option>
+            <option class="select-option" value="Hong Kong">Hong Kong</option>
+            <option class="select-option" value="Hungary">Hungary</option>
+            <option class="select-option" value="Iceland">Iceland</option>
+            <option class="select-option" value="India">India</option>
+            <option class="select-option" value="Indonesia">Indonesia</option>
+            <option class="select-option" value="Iran">Iran</option>
+            <option class="select-option" value="Iraq">Iraq</option>
+            <option class="select-option" value="Ireland">Ireland</option>
+            <option class="select-option" value="Isle of Man">Isle of Man</option>
+            <option class="select-option" value="Israel">Israel</option>
+            <option class="select-option" value="Jamaica">Jamaica</option>
+            <option class="select-option" value="Jan Mayen">Jan Mayen</option>
+            <option class="select-option" value="Jersey">Jersey</option>
+            <option class="select-option" value="Jordan">Jordan</option>
+            <option class="select-option" value="Juan de Nova Island">Juan de Nova</option>
+            <option class="select-option" value="Kazakhstan">Kazakhstan</option>
+            <option class="select-option" value="Kenya">Kenya</option>
+            <option class="select-option" value="Kiribati ">Kiribati </option>
+            <option class="select-option" value="Kuwait">Kuwait</option>
+            <option class="select-option" value="Kyrgyzstan">Kyrgyzstan</option>
+            <option class="select-option" value="Lao People's Democratic Republic">Lao PDR</option>
+            <option class="select-option" value="Latvia">Latvia</option>
+            <option class="select-option" value="Lebanon">Lebanon</option>
+            <option class="select-option" value="Lesotho">Lesotho</option>
+            <option class="select-option" value="Liberia">Liberia</option>  
+            <option class="select-option" value="Libya">Libya</option>
+            <option class="select-option" value="Liechtenstein">Liechtenstein</option>
+            <option class="select-option" value="Lithuania">Lithuania</option>
+            <option class="select-option" value="Luxembourg">Luxembourg</option>
+            <option class="select-option" value="Macau">Macau</option>
+            <option class="select-option" value="North Macedonia">North Macedonia</option>
+            <option class="select-option" value="Madagascar">Madagascar</option>
+            <option class="select-option" value="Malawi">Malawi</option>
+            <option class="select-option" value="Malaysia ">Malaysia </option>
+            <option class="select-option" value="Maldives">Maldives</option>
+            <option class="select-option" value="Mali">Mali</option>
+            <option class="select-option" value="Malta">Malta</option>
+            <option class="select-option" value="Marshall Islands">Marshall Is</option>
+            <option class="select-option" value="Martiniqie">Martinique</option>
+            <option class="select-option" value="Mauritania">Mauritania</option>
+            <option class="select-option" value="Mauritius">Mauritius</option>
+            <option class="select-option" value="Mayotte">Mayotte</option>
+            <option class="select-option" value="Mexico">Mexico</option>
+            <option class="select-option" value="Micronesia">Micronesia</option>
+            <option class="select-option" value="Moldova">Moldova</option>
+            <option class="select-option" value="Monaco">Monaco</option>
+            <option class="select-option" value="Mongolia">Mongolia</option>
+            <option class="select-option" value="Montserrat">Montserrat</option>        
+            <option class="select-option" value="Morocco">Morocco</option>
+            <option class="select-option" value="Mozambique">Mozambique</option>
+            <option class="select-option" value="Myanmar">Myanmar</option>
+            <option class="select-option" value="Namibia">Namibia</option>   
+            <option class="select-option" value="Nauru">Nauru</option>
+            <option class="select-option" value="Navassa Island">Navassa Is</option>
+            <option class="select-option" value="Nepal">Nepal</option>
+            <option class="select-option" value="Netherlands Antilles">N Antilles</option>
+            <option class="select-option" value="Netherlands">Netherlands</option>
+            <option class="select-option" value="New Caledonia">New Caledonia</option>
+            <option class="select-option" value="New Zealand">New Zealand</option>
+            <option class="select-option" value="Nicaragua">Nicaragua</option>
+            <option class="select-option" value="Niger">Niger</option>
+            <option class="select-option" value="Nigeria">Nigeria</option> 
+            <option class="select-option" value="Niue">Niue</option>
+            <option class="select-option" value="Norfolk Island">Norfolk Is</option>
+            <option class="select-option" value="Northern Mariana Islands">Mariana Is</option> 
+            <option class="select-option" value="North Korea">North Korea</option>
+            <option class="select-option" value="Norway">Norway</option>
+            <option class="select-option" value="Oman">Oman</option>
+            <option class="select-option" value="Pakistan">Pakistan</option>
+            <option class="select-option" value="Palau">Palau</option>
+            <option class="select-option" value="Panama">Panama</option>
+            <option class="select-option" value="Papua New Guinea">Papua N Guinea &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</option>
+            <option class="select-option" value="Paracel Islands">Paracel Is</option>
+            <option class="select-option" value="Paraguay">Paraguay</option>
+            <option class="select-option" value="Peru ">Peru </option>
+            <option class="select-option" value="Philippines">Philippines</option>
+            <option class="select-option" value="Pitcairn Islands">Pitcairn Is</option>
+            <option class="select-option" value="Poland">Poland</option>
+            <option class="select-option" value="Portugal ">Portugal </option>
+            <option class="select-option" value="Puerto Rico">Puerto Rico</option>
+            <option class="select-option" value="Qatar">Qatar</option>
+            <option class="select-option" value="Romania">Romania</option>
+            <option class="select-option" value="Russia">Russia</option>
+            <option class="select-option" value="Rwanda">Rwanda</option>
+            <option class="select-option" value="Saint Helena">Saint Helena</option>
+            <option class="select-option" value="Saint kitts and nevis">Saint kitts</option>
+            <option class="select-option" value="Saint Lucia">Saint Lucia</option>
+            <option class="select-option" value="Saint Pierre and Miquelon">Saint Pierre</option>
+            <option class="select-option" value="Saint Vincent and the Grenadines">Saint Vincent</option>   
+            <option class="select-option" value="Samoa">Samoa</option>
+            <option class="select-option" value="San Marino">San Marino</option>
+            <option class="select-option" value="Sao Tome and Principe">Sao Tome</option>
+            <option class="select-option" value="Saudi Arabia">Saudi Arabia</option>
+            <option class="select-option" value="Senegal" >Senegal</option> 
+            <option class="select-option" value="Serbia and Montenegro" >Serbia</option> 
+            <option class="select-option" value="Seychelles">Seychelles</option>
+            <option class="select-option" value="Sierra Leone" >Sierra Leone</option>  
+            <option class="select-option" value="Singapore">Singapore</option>
+            <option class="select-option" value="Slovakia">Slovakia</option>
+            <option class="select-option" value="Slovenia">Slovenia</option>
+            <option class="select-option" value="Solomon Islands">Solomon Is</option>
+            <option class="select-option" value="Somalia">Somalia</option>
+            <option class="select-option" value="South Africa">South Africa</option>
+            <option class="select-option" value="South Sudan">South Sudan</option> 
+            <option class="select-option" value="South Georgia and the South Sandwich Islands">South Georgia</option>
+            <option class="select-option" value="Spratly Islands">Spratly Is</option>
+            <option class="select-option" value="Sri Lanka">Sri Lanka</option>
+            <option class="select-option" value="Sudan">Sudan</option>
+            <option class="select-option" value="Suriname">Suriname</option>
+            <option class="select-option" value="Svalbard">Svalbard</option>
+            <option class="select-option" value="Swaziland">Swaziland</option>
+            <option class="select-option" value="Sweden">Sweden</option>
+            <option class="select-option" value="Switzerland">Switzerland</option>
+            <option class="select-option" value="Syria">Syria</option>
+            <option class="select-option" value="Taiwan ">Taiwan </option>
+            <option class="select-option" value="Tajikistan">Tajikistan</option>
+            <option class="select-option" value="Tanzania ">Tanzania </option>
+            <option class="select-option" value="Thailand">Thailand</option>
+            <option class="select-option" value="Timor-Leste">Timor-Leste</option>
+            <option class="select-option" value="Togo">Togo</option>
+            <option class="select-option" value="Tokelau">Tokelau</option>
+            <option class="select-option" value="Tonga">Tonga</option>    
+            <option class="select-option" value="Trinidad and Tobago">Trinidad</option>
+            <option class="select-option" value="Tromelin Island">Tromelin Is</option>
+            <option class="select-option" value="Tunisia">Tunisia</option>
+            <option class="select-option" value="Turkey">Turkey</option>
+            <option class="select-option" value="Turkmenistan">Turkmenistan</option>
+            <option class="select-option" value="Turks and Caicos Islands">Turks Is</option>
+            <option class="select-option" value="Tuvalu">Tuvalu</option>
+            <option class="select-option" value="Uganda">Uganda</option>
+            <option class="select-option" value="Ukraine">Ukraine</option>
+            <option class="select-option" value="UAE">UAE</option>
+            <option class="select-option" value="Uruguay">Uruguay</option>
+            <option class="select-option" value="Uzbekistan">Uzbekistan</option>
+            <option class="select-option" value="Vanuatu">Vanuatu</option>
+            <option class="select-option" value="Venezuela">Venezuela</option>
+            <option class="select-option" value="Vatican City">Vatican City</option>
+            <option class="select-option" value="Vietnam">Vietnam</option>
+            <option class="select-option" value="Virgin Islands">Virgin Is</option>
+            <option class="select-option" value="Wake Island">Wake Island</option>
+            <option class="select-option" value="Wallis and Futuna Islands">Wallis Is</option>
+            <option class="select-option" value="West Bank">West Bank</option>
+            <option class="select-option" value="Western Sahara">Western Sahara</option>  
+            <option class="select-option" value="Yemen">Yemen</option>
+            <option class="select-option" value="Zambia">Zambia</option>
+            <option class="select-option" value="Zimbabwe">Zimbabwe</option>
+        </select>
+        <i class="lni-envelope"></i>
+        </div>
+        </div> <!-- form input -->
+        <div class="form-input mt-15">
+        <label><strong>Upload Photo of Destination</strong></label>
+        <div class="input-items default">
+        <input type="file" name="image" required>
+        <i class="lni-user"></i>
+        </div>
+        </div> <!-- form input -->    
+        <div class="form-input rounded-buttons mt-20">                                                                             
+        <button type="submit" class="form-control-submit-button">SUBMIT</button>
+        </div> <!-- form input -->
+    </br>
+</form>
+</div> <!-- create account form -->
+</body>
+</html>
+

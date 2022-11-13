@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>Safari Destinations - Home</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="/public/style.css" />
+    <link rel="icon" type="image/png" href="/public/logo.png" sizes="32x32">
+    <link href="/public/LineIcons.css" rel="stylesheet">
+    <link href="/public/search.css" rel="stylesheet">
+    <link href="/public/bootstrap.css" rel="stylesheet">
+  </head>
+  <body>
+    <table width='100%' border='0' cellpadding="5px">
+      <tr> 
+      <td align='left' width='20%'> &nbsp;&nbsp; <a style="text-decoration: none;" href="/"><img width="23px" height="22px" src="/public/logo.png" alt="Logo"> &nbsp; <font style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;" size="5" color='#0d6bc3'><strong> Safari Destinations </strong></font> </a></td>    
+      <td border="1px" bordercolor="#bcbcbc" align='center' valign="center" width='60%'>    
+      <input type="text" style="height: 40px; width:450px; background-color:rgb(237, 233, 233);" name="search" id="search" placeholder="Safari Destinations ...." class="form-control input-m" />
+      <ul class="list-group" id="result"></ul>
+      </td>
+      <td align='right' valign="center" width='20%'> <a href="" id="url" style="text-decoration: none;" title="Add a New Location" onclick="popUp('/views/add.html','Add New Destination');"> <font style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;" size="5" color='black'><strong> + <font size="5" color='#0000'>Add</font></strong></font> </a> &nbsp;&nbsp;&nbsp; <a href="/about" id="about" style="text-decoration: none;"> <font size="5" color='black'><strong> <i class="lni-website"></i></strong></font> </a> &nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      </table>
+      <hr>
+      <table width='100%' height='100%' border='0' cellpadding="5px">
+      <tr> 
+      <td align='left' width='20%'>  </td>    
+      <td border="1px" bordercolor="#bcbcbc" align='left' valign="top" width='60%'>    
+       
+      <% if (destinations.length > 0) {%>
+        <table class="table table-hovered">
+            <tbody>
+                <% destinations.forEach((destiny, index) => { %>
+                    <tr>
+                      <td>
+
+                      <table width='100%' border='0' cellpadding="5px">
+                        <tr> 
+                          <td align='left' valign="top" width='30%'>  
+                            <img width="200px" height="150px" src="/images/<%= destiny.image %>" alt="">
+                          </td> 
+                          <td align='left' valign="top" width='70%'>  
+                            <%= destiny.location %>, <%= destiny.country %>
+                          </br></br>
+                          Call: <%= destiny.phone %>
+                          </td> 
+                        </tr>
+                      </table>
+
+                    </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+      <% } %>
+
+      </td>
+      <td align='right' valign="center" width='20%'>  </td>
+      </tr>
+      </table>
+    </br>
+
+    <script>
+            function popUp(url, name){
+              var left = (screen.width-600)/2;
+              var top = (screen.height-450)/4;
+        
+              // Launch Start URL
+              (function(){
+               window.open(url, name, 'directories=no, status=no, scrollbars=no, resizable=no, copyhistory=no, menubar=no,width=600,height=450,toolbar=no,location=no,left='+left+',top='+top);
+               }());
+  
+            }
+    </script>
+    <script src="/public/search.js"></script>
+    <script src="/public/jquery.js"></script>
+  </body>
+</html>
+

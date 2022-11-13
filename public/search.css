@@ -1,0 +1,13 @@
+  #result {
+   position: absolute;
+   width: 100%;
+   max-width:532px;
+   cursor: pointer;
+   overflow-y: auto;
+   max-height: 259px;
+   box-sizing: border-box;
+   z-index: 1001;
+  }
+  .link-class:hover{
+   background-color:#f1f1f1;
+  }

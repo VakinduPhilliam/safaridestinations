@@ -1,0 +1,228 @@
+/*===========================
+      1. COMMON CSS 
+===========================*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
+
+
+/*==== Section Title =====*/
+.section-title .title {
+  font-size: 44px;
+  font-weight: 500;
+  color: #121212;
+  line-height: 55px; }
+  @media (max-width: 767px) {
+    .section-title .title {
+      font-size: 30px;
+      line-height: 35px; } }
+.section-title .text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #6c6c6c;
+  margin-top: 24px; }
+
+
+/*===========================
+       2.BUTTON CSS
+===========================*/
+.main-btn {
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px solid transparent;
+  padding: 0 32px;
+  font-size: 16px;
+  line-height: 46px;
+  color: #666;
+  cursor: pointer;
+  z-index: 5;
+  -webkit-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+  position: relative;
+  text-transform: uppercase; }
+  @media (max-width: 767px) {
+    .main-btn {
+      font-size: 14px;
+      padding: 0 20px;
+      line-height: 40px; } }
+
+/*===== Rounded Buttons =====*/
+.rounded-buttons ul li {
+  display: inline-block;
+  margin-left: 18px;
+  margin-top: 20px; }
+  @media (max-width: 767px) {
+    .rounded-buttons ul li {
+      margin-left: 0; } }
+  .rounded-buttons ul li:first-child {
+    margin-left: 0; }
+.rounded-buttons .main-btn {
+  border-radius: 50px; }
+.rounded-buttons .rounded-three {
+  overflow: hidden;
+  line-height: 52px;
+  background: -webkit-linear-gradient(left, #43cae9 0%, #38f9d7 50%, #43cae9 100%);
+  background: -o-linear-gradient(left, #43cae9 0%, #38f9d7 50%, #43cae9 100%);
+  background: linear-gradient(to right, #43cae9 0%, #38f9d7 50%, #43cae9 100%);
+  background-size: 200% auto;
+  color: #fff;
+  border: 0;
+  -webkit-transition: all 0.1s ease-out 0s;
+  -moz-transition: all 0.1s ease-out 0s;
+  -ms-transition: all 0.1s ease-out 0s;
+  -o-transition: all 0.1s ease-out 0s;
+  transition: all 0.1s ease-out 0s; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .rounded-buttons .rounded-three {
+      line-height: 44px; } }
+  @media (max-width: 767px) {
+    .rounded-buttons .rounded-three {
+      line-height: 44px; } }
+  .rounded-buttons .rounded-three:hover {
+    background-position: right center; }
+
+
+/*===========================
+      3.CONTACT CSS
+===========================*/
+.contact-area {
+  padding-top: 95px;
+  padding-bottom: 100px;
+  background-color: #f4f6f7; }
+
+.form-control-selector {
+    width: 100%;
+    height: 44px;
+    padding-left: 44px;
+    padding-right: 12px;
+    border: 2px solid #a4a4a4;
+    background-color: #fff;
+    color: #6c6c6c;
+    position: relative;
+    font-size: 16px; /* removes inner shadow on form inputs on ios safari */
+}
+
+.account-area {
+    padding-top: 95px;
+    padding-bottom: 100px;
+    background-color: #e3e4e6; }
+
+.form-message.error, .form-message.success {
+  font-size: 16px;
+  color: #121212;
+  padding: 10px 15px;
+  margin-top: 15px;
+  background-color: #e9ecef; }
+.form-message.error {
+  color: #fc3832; }
+
+.single-contact-box {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px 35px;
+  height: 255px; }
+  @media (max-width: 767px) {
+    .single-contact-box {
+      padding: 24px 20px; } }
+  .single-contact-box .box-icon {
+    position: relative;
+    display: inline-block; }
+    .single-contact-box .box-icon i {
+      font-size: 88px;
+      position: relative;
+      z-index: 5;
+      color: #38f9d7; }
+    .single-contact-box .box-icon .shape {
+      position: absolute;
+      top: 0;
+      left: 0; }
+  .single-contact-box .box-content {
+    margin-top: 24px; }
+    .single-contact-box .box-content .box-title {
+      font-size: 28px;
+      line-height: 35px;
+      color: #121212; }
+    .single-contact-box .box-content .text {
+      font-size: 14px;
+      line-height: 20px;
+      color: #121212;
+      margin-top: 16px; }
+
+.contact-two .contact-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #121212; }
+.contact-two .text {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 16px;
+  color: #6c6c6c; }
+.contact-two .contact-info {
+  margin-top: 40px; }
+  .contact-two .contact-info li {
+    color: #6c6c6c;
+    margin-top: 8px;
+    font-size: 16px; }
+    .contact-two .contact-info li i {
+      margin-right: 5px;
+      color: #121212; }
+
+.contact-map .gmap_canvas iframe {
+  width: 100%;
+  height: 400px; }
+
+.form-group {
+  margin-bottom: 0; }
+
+.form-input label {
+  font-size: 12px;
+  line-height: 18px;
+  color: #6c6c6c;
+  margin-bottom: 8px;
+  display: inline-block; }
+.form-input .input-items {
+  position: relative; }
+  .form-input .input-items input, .form-input .input-items textarea {
+    width: 100%;
+    height: 44px;
+    border: 2px solid #a4a4a4;
+    padding-left: 44px;
+    padding-right: 12px;
+    position: relative;
+    font-size: 16px;
+    color: #6c6c6c; }
+    .form-input .input-items input:focus, .form-input .input-items textarea:focus {
+      border-color: #38f9d7; }
+    .form-input .input-items input::placeholder, .form-input .input-items textarea::placeholder {
+      color: #6c6c6c;
+      opacity: 1; }
+    .form-input .input-items input::-moz-placeholder, .form-input .input-items textarea::-moz-placeholder {
+      color: #6c6c6c;
+      opacity: 1; }
+    .form-input .input-items input::-moz-placeholder, .form-input .input-items textarea::-moz-placeholder {
+      color: #6c6c6c;
+      opacity: 1; }
+    .form-input .input-items input::-webkit-input-placeholder, .form-input .input-items textarea::-webkit-input-placeholder {
+      color: #6c6c6c;
+      opacity: 1; }
+  .form-input .input-items textarea {
+    padding-top: 8px;
+    height: 130px;
+    resize: none; }
+  .form-input .input-items i {
+    position: absolute;
+    top: 11px;
+    left: 13px;
+    font-size: 20px;
+    z-index: 9;
+    color: #6c6c6c; }
+
+/*# sourceMappingURL=style.css.map */
