@@ -14,9 +14,7 @@ const port = 6400; // connection port
 
 // Connect uri to MongoDB Atlas
 
-//const uri ='mongodb+srv://<username>:<password>@cluster0.asqpg9v.mongodb.net/test'; // Atlas uri
-
-const uri = 'mongodb://127.0.0.1:27017'; // local desktop uri
+const uri ='mongodb+srv://<username>:<password>@cluster0.asqpg9v.mongodb.net/test'; // Atlas uri
 
 const client = new MongoClient(uri,{
     maxPoolSize:50,

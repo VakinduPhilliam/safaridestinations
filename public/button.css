@@ -1,0 +1,491 @@
+/* Template: Aria - Business HTML Landing Page Template
+   Author: Inovatik
+   Created: Jul 2019
+   Description: Master CSS file
+*/
+
+/******************************/
+/*     01. General Styles     */
+/******************************/
+
+.testimonial-text {
+	font-style: italic;
+}
+
+.testimonial-author {
+	font: 700 1rem/1.375rem "Montserrat", sans-serif;
+}
+
+.section-title {
+	color: #14bf98;
+	font: 500 0.8125rem/1.125rem "Montserrat", sans-serif;
+}
+
+.btn-solid-reg {
+	display: inline-block;
+	padding: 1.1875rem 1.875rem 1.1875rem 1.875rem;
+	border: 0.125rem solid #14bf98;
+	border-radius: 0.25rem;
+	background-color: #14bf98;
+	color: #fff;
+	font: 700 0.75rem/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-solid-reg:hover {
+	background-color: transparent;
+	color: #14bf98;
+	text-decoration: none;
+}
+
+.btn-solid-lg {
+	display: inline-block;
+	padding: 1.375rem 2.125rem 1.375rem 2.125rem;
+	border: 0.125rem solid #14bf98;
+	border-radius: 0.25rem;
+	background-color: #14bf98;
+	color: #fff;
+	font: 700 0.75rem/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-solid-lg:hover {
+	background-color: transparent;
+	color: #14bf98;
+	text-decoration: none;
+}
+
+.btn-outline-reg {
+	display: inline-block;
+	padding: 1.1875rem 1.875rem 1.1875rem 1.875rem;
+	border: 0.125rem solid #787976;
+	border-radius: 0.25rem;
+	background-color: transparent;
+	color: #787976;
+	font: 700 0.75rem/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-outline-reg:hover {
+	background-color: #787976;
+	color: #fff;
+	text-decoration: none;
+}
+
+.btn-outline-regs {
+	display: inline-block;
+	padding: 1.1875rem 1.875rem 1.1875rem 1.875rem;
+	border: 0.125rem solid #787976;
+	border-radius: 0.25rem;
+	background-color: #fff;
+	color: #60615e;
+	font: 700 0.75rem/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-outline-regs:hover {
+	background-color: #787976;
+	color: #fff;
+	text-decoration: none;
+}
+
+.btn-outline-lg {
+	display: inline-block;
+	padding: 1.375rem 2.125rem 1.375rem 2.125rem;
+	border: 0.125rem solid #787976;
+	border-radius: 0.25rem;
+	background-color: transparent;
+	color: #787976;
+	font: 700 0.75rem/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-outline-lg:hover {
+	background-color: #787976;
+	color: #fff;
+	text-decoration: none;
+}
+
+.btn-outline-sm {
+	display: inline-block;
+	padding: 1rem 1.625rem 0.9375rem 1.625rem;
+	border: 0.125rem solid #787976;
+	border-radius: 0.25rem;
+	background-color: transparent;
+	color: #787976;
+	font: 700 0.75rem/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-outline-sm:hover {
+	background-color: #787976;
+	color: #fff;
+	text-decoration: none;
+}
+
+.label-control {
+	position: absolute;
+	top: 0.8125rem;
+	left: 1.375rem;
+	color: #787976;
+	opacity: 1;
+	font: 400 0.875rem/1.375rem "Open Sans", sans-serif;
+	cursor: text;
+	transition: all 0.2s ease;
+}
+
+/* Fade-move Animation For Lightbox - Magnific Popup */
+/* at start */
+.my-mfp-slide-bottom .zoom-anim-dialog {
+	opacity: 0;
+	transition: all 0.2s ease-out;
+	-webkit-transform: translateY(-1.25rem) perspective(37.5rem) rotateX(10deg);
+	-ms-transform: translateY(-1.25rem) perspective(37.5rem) rotateX(10deg);
+	transform: translateY(-1.25rem) perspective(37.5rem) rotateX(10deg);
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+	opacity: 1;
+	-webkit-transform: translateY(0) perspective(37.5rem) rotateX(0); 
+	-ms-transform: translateY(0) perspective(37.5rem) rotateX(0); 
+	transform: translateY(0) perspective(37.5rem) rotateX(0); 
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+	opacity: 0;
+	-webkit-transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg); 
+	-ms-transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg); 
+	transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg); 
+}
+
+/* dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg {
+	opacity: 0;
+	transition: opacity 0.2s ease-out;
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+/* end of fade-move animation for lightbox - magnific popup */
+
+/*************************/
+/*     02. Preloader     */
+/*************************/
+.spinner-wrapper {
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #113448;
+}
+
+.spinner {
+	position: absolute;
+	top: 50%; /* centers the loading animation vertically one the screen */
+	left: 50%; /* centers the loading animation horizontally one the screen */
+	width: 3.75rem;
+	height: 1.25rem;
+	margin: -0.625rem 0 0 -1.875rem; /* is width and height divided by two */ 
+	text-align: center;
+}
+
+.spinner > div {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 100%;
+	background-color: #fff;
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%, 80%, 100% { -webkit-transform: scale(0); }
+	40% { -webkit-transform: scale(1.0); }
+}
+
+@keyframes sk-bouncedelay {
+	0%, 80%, 100% { 
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);
+	} 40% { 
+		-webkit-transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		transform: scale(1.0);
+	}
+}
+
+
+/************************/
+/*     03. Projects     */
+/************************/
+.filter {
+	padding-top: 6.5rem;
+	padding-bottom: 7rem;
+}
+
+.filter .section-title {
+	margin-bottom: 0.5rem;
+}
+
+.filter h2,
+.filter .section-title {
+	text-align: center;
+}
+
+.filter h2 {
+	margin-bottom: 3.25rem;
+}
+
+.filter .button-group {
+	text-align: center;
+}
+
+.filter .button-group a {
+	display: inline-block;
+	margin-right: 0.1875rem;
+	margin-bottom: 0.5rem;
+	margin-left: 0.1875rem;
+	padding: 0.3125rem 1.375rem 0.25rem 1.375rem;
+	border-radius: 0.25rem;
+	background-color: #f1f4f7;
+	color: #7b7e85;
+	font: 700 0.75rem/1.25rem "Montserrat", sans-serif;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.filter .button-group a:hover {
+	background-color: #14bf98;
+	color: #fff;
+}
+
+.filter .button-group a.button.is-checked {
+	background-color: #14bf98;
+	color: #fff;
+}
+
+.filter .grid {
+	margin-top: 1.25rem;
+	border-radius: 0.375rem;
+}
+
+/* Hover Animation */
+.filter .element-item {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: 50%;
+	background-color: #000; /* to hide 1px white margin in IE */
+}
+
+.filter .element-item img {
+	max-width: 100%;
+	margin: 0;
+	transition: all 0.3s;
+}
+
+.filter .element-item:hover img {
+	-moz-transform: scale(1.15);
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+} 
+/* end of hover animation */
+
+.filter .element-item .element-item-overlay { 
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	opacity: 1;
+	text-align: center;
+	transition: all 0.3s;
+}
+
+.filter .element-item .element-item-overlay span { 
+	position: absolute;
+	z-index: 3;
+	top: 42%;
+	right: 0;
+	left: 0;
+	color: #fff;
+	font: 700 1.125rem/1.625rem "Montserrat", sans-serif;
+}
+
+
+/**********************************/
+/*     04. Project Lightboxes     */
+/**********************************/
+.lightbox-basic {
+	position: relative;
+	max-width: 62.5rem;
+	margin: 2.5rem auto;
+	padding: 1.5625rem;
+	border-radius: 0.25rem;
+	background: #fff;
+	text-align: left;
+}
+
+.lightbox-basic img {
+	margin-right: auto;
+	margin-bottom: 2rem;
+	margin-left: auto;
+	border-radius: 0.25rem;
+}
+
+.lightbox-basic .line-heading {
+	width: 3rem;
+	height: 1px;
+	margin-top: 0;
+	margin-bottom: 0.625rem;
+	margin-left: 0;
+	border: none;
+	background-color: #14bf98;
+}
+
+.lightbox-basic h6 {
+	margin-bottom: 2rem;
+}
+
+.lightbox-basic .testimonial-container {
+	margin-top: 1.75rem;
+	margin-bottom: 2.125rem;
+	padding: 1.125rem 1.5rem 1.125rem 1.5rem;
+	border-radius: 0.25rem;
+	background-color: #fbfbfb;
+}
+
+.lightbox-basic .testimonial-text {
+	margin-bottom: 0.5rem;
+}
+
+.lightbox-basic .testimonial-author {
+	margin-bottom: 0;
+}
+
+.lightbox-basic .btn-solid-reg,
+.lightbox-basic .btn-outline-reg {
+	margin-right: 0.375rem;
+	margin-bottom: 1rem;
+}
+
+.lightbox-basic a.mfp-close.as-button {
+	position: relative;
+	width: auto;
+	height: auto;
+	margin-right: 0.5rem;
+	color: #484a46;
+	opacity: 1;
+}
+
+.lightbox-basic a.mfp-close.as-button:hover {
+	color: #f2f2f2;
+}
+
+.lightbox-basic button.mfp-close.x-button {
+	position: absolute;
+	top: -0.375rem;
+	right: -0.375rem;
+	width: 2.75rem;
+	height: 2.75rem;
+}
+
+/*****************************/
+/*     05. Media Queries     */
+/*****************************/	
+/* Min-width width 768px */
+@media (min-width: 768px) {
+	
+	/* General Styles */
+	.p-heading {
+		width: 85%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	/* end of general styles */
+
+	/* Projects */
+	.filter .element-item { 
+		width: 25%; 
+	}
+	
+	.filter .element-item .element-item-overlay { 
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.filter .element-item:hover .element-item-overlay {
+		opacity: 1;
+	}
+	/* end of projects */
+
+}
+/* end of min-width width 768px */
+
+
+/* Min-width width 992px */
+@media (min-width: 992px) {
+	
+	/* General Styles */
+	.p-heading {
+		width: 65%;
+	}
+	/* end of general styles */
+
+	/* Project Lightboxes */
+	.lightbox-basic img {
+		margin-bottom: 0;
+	}
+	
+	.lightbox-basic h3 {
+		margin-top: 0.375rem;
+	}
+
+	.lightbox-basic .btn-solid-reg,
+	.lightbox-basic .btn-outline-reg {
+		margin-bottom: 0;
+	}
+	/* end of project lightboxes */
+
+	/* Projects */
+	.filter .element-item {
+		width: 17.3125rem; /* to eliminate grid overflow problem on hard refresh */
+		height: 16.875rem;
+	}
+
+	.filter .element-item .element-item-overlay span { 
+		top: 45%;
+	}
+	/* end of projects */
+}
+/* end of min-width width 1200px */

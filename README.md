@@ -35,6 +35,8 @@ Install the following applications on your PC before installing Safari Destinati
 
 Go to https://github.com/VakinduPhilliam/SafariDestinations and download or clone Safari Destination's core app.
 
+[Make sure to change the MongoDB Atlas URI username and password parameters to your own Atlas username and password]
+
 </br>
 
 ### Install NPM dependencies:

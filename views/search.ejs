@@ -10,6 +10,7 @@
     <link href="/public/search.css" rel="stylesheet"/>
     <link href="/public/bootstrap.css" rel="stylesheet"/>
     <link href="/public/jquery-ui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/public/button.css"/>
   </head>
   <body>
     <table width='100%' border='0' cellpadding="5px">
@@ -53,7 +54,7 @@
                           <td align='left' valign="top" width='70%'>  
                             <%= destiny.location %>, <%= destiny.country %>
                           </br></br>
-                          Call: <%= destiny.phone %>
+                          <a class="btn-solid-reg" href="">Call: <%= destiny.phone %></a>
                           </td> 
                         </tr>
                       </table>
