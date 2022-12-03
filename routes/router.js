@@ -1,9 +1,10 @@
 
 // Import helper functions
-const {writeData, readData} = require('../helpers/save')
 const {isEmail, isPhone} = require('../helpers/helper')
 const { resolve } = require('path'); // Import path finder
 const imageFolder = resolve('./images/'); // Identify invoices storage folder
+const locationsFolder = resolve('./public/'); // Identify invoices storage folder
+const fs = require('fs');
 
 module.exports = {
 
@@ -118,15 +119,71 @@ module.exports = {
             title: " "
             ,message: ''
         });
-    },      
+    }, 
     
+    // Object function to load search page.
+    search: async (req, res) => {
+
+    let search = req.query.search; // Get search query
+
+    async function searchDestinations(client, resultsLimit) {
+
+        const cursor = client
+          .db('safari')
+          .collection('destinations')
+          //.aggregate([{ $match : { country: search } }], {collation:{locale:'en', strength:2}})
+          //.aggregate([{ $match : {$or: [{ country: search}, {location: search }]} }], {collation:{locale:'en', strength:2}})
+          .aggregate([{ $match : {$or: [{ country: search}, {location: search }]} }], {collation:{locale:'en', strength:2}})
+          .limit(resultsLimit);
+      
+        const results = await cursor.toArray();
+
+        return results;
+
+    }
+
+    let destinations = await searchDestinations(client, 20); // Get travel destinations
+
+    res.render('search.ejs', {
+        title: " ",
+        message: '',
+        destinations:destinations
+    });
+
+    },
+
     // Object function to load about page
     about: (req, res) => {
         res.render('about.ejs', {
             title: " "
             ,message: ''
         });
-    },     
+    },
+    
+    // Query the MongoDB Database for autocomplete
+    query: async (req, res) => {
+        try {
+            let result = await collection.aggregate([
+                {
+                    "$search": {
+                        "autocomplete": {
+                            "query": `${req.query.query}`,
+                            "path": "name",
+                            "fuzzy": {
+                                "maxEdits": 2,
+                                "prefixLength": 3
+                            }
+                        }
+                    }
+                }
+            ]).toArray();
+
+            res.send(result);
+
+        } catch (e) {
+            res.status(500).send({ message: e.message });
+        }
+    } 
 
 };
 

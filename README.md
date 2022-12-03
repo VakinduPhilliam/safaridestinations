@@ -5,6 +5,8 @@ Safari Destinations is a platform built to showcase the best travel destinations
 
 Users can search through our catalog of the best safari destinations on the African continent.
 
+Users can also add new travel destinations to the catalog.
+
 The travel destinations are stored in a MongoDB Atlas Cloud Database and fetched per user query.
 
 <br/>
@@ -51,7 +53,7 @@ _node index.js_
 
 </br>
 
-You should see a message like, "Server running on port: 6300" in your command terminal if the app is running successfully.
+You should see a message like, "Server running on port: 6400" in your command terminal if the app is running successfully.
 
-Open your browser and visit, http://localhost:6300/ to view the app.
+Open your browser and visit, http://localhost:6400/ to view the app.
 

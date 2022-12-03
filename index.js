@@ -8,14 +8,15 @@ const fileUpload = require('express-fileupload');
 const app = express();
 
 // Import routers
-const {newAdd, indexPage, add, done, about} = require('./routes/router');
+const {newAdd, indexPage, add, done, about, search} = require('./routes/router');
 
-const port = 6300; // connection port
+const port = 6400; // connection port
 
 // Connect uri to MongoDB Atlas
-// const uri ='mongodb+srv://vakindu:12345@cluster0.igdrlry.mongodb.net/?retryWrites=true&w=majority'; // Atlas uri
 
-const uri = 'mongodb://127.0.0.1:27017';
+//const uri ='mongodb+srv://<username>:<password>@cluster0.asqpg9v.mongodb.net/test'; // Atlas uri
+
+const uri = 'mongodb://127.0.0.1:27017'; // local desktop uri
 
 const client = new MongoClient(uri,{
     maxPoolSize:50,
@@ -48,6 +49,7 @@ app.get('/', indexPage); // Route for loading the front page.
 app.get('/add', add); // Route for loading the add dig page.
 app.post('/newAdd', newAdd); // Route for posting and processing 'new dig' data.
 app.get('/done', done); // Route for posting and processing 'new dig' data.
+app.get('/search', search); // Route for searching safari destinations
 app.get('/about', about); // Route for posting and processing 'new dig' data.
 
 // set the app to listen on the port
